@@ -2,7 +2,7 @@ import {render} from '@testing-library/react'
 import Products from './Products'
 import { describe, it } from 'vitest'
 import { Provider } from 'react-redux'
-import { store } from '../../app/store.js';
+import { store } from '../../app/store'
 
 describe('Products component', () => {
   it('Renders without crashing', () => {

@@ -1,0 +1,30 @@
+.contacts {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+
+  &__title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

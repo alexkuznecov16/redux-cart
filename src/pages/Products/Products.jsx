@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { load, addToCart } from './productSlice.js';
 import './Products.scss'
 import box from '../../assets/box.png'
-import Cart from '../Cart/Cart.jsx';
+import Cart from '../../Components/Cart/Cart';
 import { FaCartShopping } from "react-icons/fa6";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -53,7 +53,7 @@ const Products = () => {
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 5) {
+      if (scrollTop + clientHeight >= scrollHeight - 50) {
         dispatch(load());
       }
     };

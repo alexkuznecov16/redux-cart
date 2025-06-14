@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from '../Products/productSlice';
+import { removeFromCart } from '../../pages/Products/productSlice';
 import './Cart.scss'
 
 export const Cart = ({ isOpen, onClose }) => {

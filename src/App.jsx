@@ -1,15 +1,28 @@
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
-import Products from './Components/Products/Products'
+import Products from './pages/Products/Products'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Contacts from './pages/Contacts/Contacts'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
 
   return (
-    <div>
-      <Header />
-      <Products />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className='app'>
+        <Header />
+        <main className="content">
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/products' element={<Products />} />
+            <Route path='/contacts' element={<Contacts />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+     </div>
+    </BrowserRouter>
   )
 }
 
