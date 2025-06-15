@@ -1,14 +1,6 @@
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 import './Countries.scss'
-
-const GET_COUNTRIES = gql`
-query {
-  countries {
-    code
-    name
-    emoji
-  }
-}`;
+import { GET_COUNTRIES } from '../../app/query';
 
 function Countries() {
   const { loading, error, data } = useQuery(GET_COUNTRIES)
@@ -18,7 +10,7 @@ function Countries() {
   return (
     <div className='countries'>
       <div className="container">
-        <ul>
+        <ul className='countries-list'>
           {data.countries.slice(0, 10).map((country) => (
             <li key={country.code}>
               {country.emoji} {country.name} ({country.code})

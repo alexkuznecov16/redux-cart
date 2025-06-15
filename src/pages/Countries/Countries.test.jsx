@@ -2,17 +2,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it } from 'vitest'
 import Countries from './Countries';
 import { MockedProvider } from '@apollo/client/testing';
-import { gql } from '@apollo/client';
 import '@testing-library/jest-dom';
-
-const GET_COUNTRIES = gql`
-query {
-  countries {
-    code
-    name
-    emoji
-  }
-}`;
+import { GET_COUNTRIES } from '../../app/query';
 
 const mocks = [
   {
