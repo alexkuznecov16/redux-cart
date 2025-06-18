@@ -4,8 +4,9 @@ import Products from './pages/Products/Products'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Contacts from './pages/Contacts/Contacts'
-import NotFound from './pages/NotFound/NotFound'
 import Countries from './pages/Countries/Countries'
+import Users from './pages/Users/Users'
+import NotFound from './pages/NotFound/NotFound'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path='/products' element={<Products />} />
             <Route path='/contacts' element={<Contacts />} />
             <Route path='/countries' element={<Countries />} />
+            <Route path='/users' element={<Users />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
