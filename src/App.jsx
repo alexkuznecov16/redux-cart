@@ -7,6 +7,8 @@ import Contacts from './pages/Contacts/Contacts'
 import Countries from './pages/Countries/Countries'
 import Users from './pages/Users/Users'
 import NotFound from './pages/NotFound/NotFound'
+import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
             <Route path='/contacts' element={<Contacts />} />
             <Route path='/countries' element={<Countries />} />
             <Route path='/users' element={<Users />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

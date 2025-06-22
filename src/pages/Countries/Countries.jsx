@@ -11,7 +11,7 @@ function Countries() {
     <div className='countries'>
       <div className="container">
         <ul className='countries-list'>
-          {data.countries.slice(0, 10).map((country) => (
+          {data.countries.slice(0, 50).map((country) => (
             <li key={country.code}>
               {country.emoji} {country.name} ({country.code})
             </li>
