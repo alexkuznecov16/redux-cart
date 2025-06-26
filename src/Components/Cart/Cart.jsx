@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from '../../pages/Products/productSlice';
+import { removeFromCart, clearCart } from '../../pages/Products/productSlice';
 import './Cart.scss'
 
 export const Cart = ({ isOpen, onClose }) => {
@@ -35,6 +35,7 @@ export const Cart = ({ isOpen, onClose }) => {
       <button className="close-btn" onClick={onClose}>×</button>
       <div className="container">
         <h2>Your cart [{cartItems.length}]</h2>
+        {cartItems.length > 0 && <button className='clear-cart' onClick={() => dispatch(clearCart())}>Clear cart</button>}
         <ul>
           {itemsArray.map((item) => (
             <li key={item.id}>
