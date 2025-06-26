@@ -9,6 +9,7 @@ import Users from './pages/Users/Users'
 import NotFound from './pages/NotFound/NotFound'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
+import Payments from './Components/Payments/Payments'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/users' element={<Users />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/checkout' element={<Payments />}/>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

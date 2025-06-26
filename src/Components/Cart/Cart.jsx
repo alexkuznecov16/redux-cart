@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, clearCart } from '../../pages/Products/productSlice';
 import './Cart.scss'
+import { Link } from 'react-router-dom';
 
 export const Cart = ({ isOpen, onClose }) => {
   const cartItems = useSelector((state) => state.product.items);
@@ -48,6 +49,7 @@ export const Cart = ({ isOpen, onClose }) => {
             </li>
           ))}
           <p>total price: ${totalPrice.toFixed(2)}</p>
+          <Link to='/checkout'>Go to checkout</Link>
         </ul>
       </div>
     </div>
