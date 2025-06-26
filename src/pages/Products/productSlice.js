@@ -1,9 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {data} from './Products';
 
+const savedCart = localStorage.getItem('cart');
+const initialCart = savedCart ? JSON.parse(savedCart) : [];
+
 const initialState = {
 	value: 6, // products count
-	items: [], // cart array
+	items: initialCart, // cart array
 };
 
 const productSlice = createSlice({
@@ -24,12 +27,14 @@ const productSlice = createSlice({
 
 			if (existingCount < product.count) {
 				state.items.push(product);
+				localStorage.setItem('cart', JSON.stringify(state.items));
 			}
 		},
 		removeFromCart: (state, action) => {
 			const index = state.items.findIndex(item => item.id === action.payload.id);
 			if (index !== -1) {
 				state.items.splice(index, 1); // remove only 1 element
+				localStorage.setItem('cart', JSON.stringify(state.items));
 			}
 		},
 	},
