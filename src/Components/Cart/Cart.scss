@@ -12,6 +12,18 @@
   display: flex;
   flex-direction: column;
 
+  .clear-cart {
+    background-color: #e74c3c;
+    color: #fff;
+    border: .2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
   .close-btn {
     align-self: flex-end;
     font-size: 2rem;
